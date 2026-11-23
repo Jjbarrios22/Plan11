@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizarra Digital - Expresión Artística Plan #11</title>
+    <!-- Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'montano-blue': '#1269A8',
+                        'montano-yellow': '#F7D615',
+                        'montano-green': '#54887D',
+                        'montano-light-blue': '#88B5C7',
+                        'montano-olive': '#A6B046',
+                        'montano-bg': '#F2F5E9'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F2F5E9;
+        }
+        .tab-btn.active {
+            background-color: #1269A8;
+            color: #ffffff;
+            border-bottom: 4px solid #F7D615;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-slate-800 flex flex-col justify-between">
+
+    <!-- Encabezado Principal / Header -->
+    <header class="bg-montano-blue text-white shadow-lg p-4 border-b-4 border-montano-yellow">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyEop0yf6lZ7Jk9MILZxF1rBj4Oqs5esyhIQ&s" alt="Logo Colegio Montano" class="h-14 bg-white p-1 rounded-lg shadow-sm" onerror="this.src='https://placehold.co/100x100/1269A8/ffffff?text=Montano'">
+                <div>
+                    <h1 class="text-xl font-bold tracking-wide text-montano-yellow">COLEGIO MONTANO</h1>
+                    <p class="text-xs text-slate-100 uppercase tracking-widest font-semibold">Pizarra Digital Interactiva · Expresión Artística</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <button onclick="toggleFullscreen()" class="flex items-center gap-2 bg-montano-yellow text-montano-blue font-bold px-4 py-2 rounded-lg shadow hover:bg-yellow-400 transition-colors cursor-pointer text-sm">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-5h-4m4 0v4m0-4l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                    </svg>
+                    <span>Pantalla Completa</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="max-w-7xl mx-auto w-full p-4 md:p-6 flex-grow space-y-6">
+
+        <!-- Ficha de Datos del Plan Diario -->
+        <div class="bg-white rounded-xl shadow-md border border-slate-200 p-4 md:p-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+            <div class="bg-slate-50 p-3 rounded-lg border-l-4 border-montano-blue">
+                <p class="text-xs text-slate-500 font-bold uppercase">Curso & Grado</p>
+                <p class="font-bold text-slate-800">Expresión Artística - Tercero Primaria</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-lg border-l-4 border-montano-green">
+                <p class="text-xs text-slate-500 font-bold uppercase">Tema & Plan</p>
+                <p class="font-bold text-slate-800">Paisaje de otoño (Plan #11)</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-lg border-l-4 border-montano-olive">
+                <p class="text-xs text-slate-500 font-bold uppercase">Fecha & Unidad</p>
+                <p class="font-bold text-slate-800">15 de febrero de 2027 | Unidad I</p>
+            </div>
+            <div class="bg-slate-50 p-3 rounded-lg border-l-4 border-montano-light-blue">
+                <p class="text-xs text-slate-500 font-bold uppercase">Docente</p>
+                <p class="font-bold text-slate-800">Jorge Barrios</p>
+            </div>
+
+            <!-- Competencia e Indicador -->
+            <div class="md:col-span-2 bg-blue-50/50 p-3 rounded-lg border border-blue-100">
+                <p class="text-xs font-bold text-montano-blue uppercase">Competencia CNB:</p>
+                <p class="text-xs text-slate-700 mt-1">Organiza elementos del entorno natural, cultural y fantástico en obras visuales con intención comunicativa.</p>
+            </div>
+            <div class="md:col-span-2 bg-emerald-50/50 p-3 rounded-lg border border-emerald-100">
+                <p class="text-xs font-bold text-montano-green uppercase">Indicador de Logro (3.3):</p>
+                <p class="text-xs text-slate-700 mt-1">Representa «Paisaje de otoño» mediante una escena con elementos reconocibles, relaciones espaciales y colores pertinentes.</p>
+            </div>
+        </div>
+
+        <!-- Propósito e Integración de Hábitos Montano -->
+        <div class="bg-white rounded-xl shadow-md border border-slate-200 p-4">
+            <h2 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Hábitos Montano & Propósitos Intencionales Destacados</h2>
+            <div class="flex flex-wrap gap-2 text-xs">
+                <span class="px-3 py-1 bg-montano-yellow/30 text-slate-800 font-semibold rounded-full border border-montano-yellow">Creatividad ✓</span>
+                <span class="px-3 py-1 bg-montano-blue/10 text-montano-blue font-semibold rounded-full border border-montano-blue/20">Creatividad e innovación ✓</span>
+                <span class="px-3 py-1 bg-montano-green/10 text-montano-green font-semibold rounded-full border border-montano-green/20">Aprendizaje autónomo y adaptabilidad ✓</span>
+                <span class="px-3 py-1 bg-montano-olive/10 text-montano-olive font-semibold rounded-full border border-montano-olive/20">Pensamiento crítico y resolución de problemas ✓</span>
+            </div>
+        </div>
+
+        <!-- Pestañas de Navegación de Actividades -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+            <div class="flex border-b border-slate-200 bg-slate-100 overflow-x-auto">
+                <button id="btn-tab1" onclick="switchTab('tab1')" class="tab-btn active flex-1 py-3 px-4 text-sm text-center whitespace-nowrap transition-all cursor-pointer">
+                    I) Introducción Motivante (10 min)
+                </button>
+                <button id="btn-tab2" onclick="switchTab('tab2')" class="tab-btn flex-1 py-3 px-4 text-sm text-center whitespace-nowrap transition-all cursor-pointer">
+                    II) Tarea Individual (45 min)
+                </button>
+                <button id="btn-tab3" onclick="switchTab('tab3')" class="tab-btn flex-1 py-3 px-4 text-sm text-center whitespace-nowrap transition-all cursor-pointer">
+                    III) Plenaria (5 min)
+                </button>
+            </div>
+
+            <!-- Contenido Pestaña 1: Introducción Motivante -->
+            <div id="tab1" class="tab-content p-6 space-y-4">
+                <div class="flex items-center justify-between border-b pb-3 border-slate-100">
+                    <span class="text-xs font-bold bg-montano-yellow text-slate-800 px-3 py-1 rounded-full uppercase">Tiempo: 10 minutos</span>
+                    <span class="text-xs text-slate-500 font-medium">Recursos: Imágenes de referencia, presentación y pizarra.</span>
+                </div>
+                <h3 class="text-lg font-bold text-montano-blue">Introducción motivante</h3>
+                <p class="text-base text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-lg border-l-4 border-montano-blue">
+                    El docente explica el tema «Paisaje de otoño» y muestra ejemplos visuales para orientar el dibujo.
+                </p>
+
+                <!-- Orientación interactiva complementaria para proyección en clase -->
+                <div class="mt-4 border border-slate-200 rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion('acc1')" class="w-full text-left p-3 bg-slate-100 hover:bg-slate-200 font-bold text-xs text-montano-blue flex justify-between items-center cursor-pointer">
+                        <span>💡 VER PUNTOS CLAVE PARA PROYECTAR EN LA INTRODUCCIÓN</span>
+                        <span id="acc1-icon" class="transform transition-transform">▼</span>
+                    </button>
+                    <div id="acc1" class="hidden p-4 bg-white text-xs text-slate-600 space-y-2 border-t">
+                        <p>• <strong>Gama cromática del otoño:</strong> Resaltar el uso de tonos cálidos (amarillos, anaranjados, rojos, cafés y dorados).</p>
+                        <p>• <strong>Elementos del entorno:</strong> Árboles perdiendo hojas, hojas cayendo, suelo cubierto de vegetación seca y luz suave.</p>
+                        <p>• <strong>Profundidad:</strong> Diferenciar elementos en primer plano y fondo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido Pestaña 2: Tarea Individual -->
+            <div id="tab2" class="tab-content hidden p-6 space-y-4">
+                <div class="flex items-center justify-between border-b pb-3 border-slate-100">
+                    <span class="text-xs font-bold bg-montano-green text-white px-3 py-1 rounded-full uppercase">Tiempo: 45 minutos</span>
+                    <span class="text-xs text-slate-500 font-medium">Recursos: Hoja de dibujo, lápiz, borrador, crayones de madera y marcadores.</span>
+                </div>
+                <h3 class="text-lg font-bold text-montano-green">Tarea individual</h3>
+                <p class="text-base text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-lg border-l-4 border-montano-green">
+                    Cada estudiante realiza una composición original sobre «Paisaje de otoño», agrega detalles y aplica color.
+                </p>
+
+                <!-- Desplegable con lista de verificación o recomendaciones -->
+                <div class="mt-4 border border-slate-200 rounded-lg overflow-hidden">
+                    <button onclick="toggleAccordion('acc2')" class="w-full text-left p-3 bg-slate-100 hover:bg-slate-200 font-bold text-xs text-montano-green flex justify-between items-center cursor-pointer">
+                        <span>✏️ ORIENTACIÓN Y CRITERIOS PARA EL TRABAJO INDIVIDUAL</span>
+                        <span id="acc2-icon" class="transform transition-transform">▼</span>
+                    </button>
+                    <div id="acc2" class="hidden p-4 bg-white text-xs text-slate-600 space-y-2 border-t">
+                        <p>1. Trazar suavemente la estructura general del paisaje con lápiz.</p>
+                        <p>2. Integrar detalles característicos del otoño (hojas en vuelo, texturas de árboles, colores cálidos).</p>
+                        <p>3. Aplicar técnicas de coloración limpia combinando crayones de madera y marcadores.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contenido Pestaña 3: Plenaria -->
+            <div id="tab3" class="tab-content hidden p-6 space-y-4">
+                <div class="flex items-center justify-between border-b pb-3 border-slate-100">
+                    <span class="text-xs font-bold bg-montano-blue text-white px-3 py-1 rounded-full uppercase">Tiempo: 5 minutos</span>
+                    <span class="text-xs text-slate-500 font-medium">Recursos: Obras realizadas por los estudiantes.</span>
+                </div>
+                <h3 class="text-lg font-bold text-montano-blue">Plenaria</h3>
+                <p class="text-base text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-lg border-l-4 border-montano-blue">
+                    Dos estudiantes muestran su trabajo y comentan una característica del tema. El docente ofrece retroalimentación breve.
+                </p>
+            </div>
+        </div>
+
+        <!-- Instrumento de Evaluación: Lista de Cotejo Interactiva -->
+        <div class="bg-white rounded-xl shadow-lg border border-slate-200 p-6 space-y-4">
+            <h3 class="text-base font-bold text-montano-blue uppercase border-b pb-2 flex items-center gap-2">
+                <span>📋 Instrumento de Evaluación - Lista de Cotejo de la Plenaria</span>
+            </h3>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs text-slate-600 border-collapse">
+                    <thead>
+                        <tr class="bg-montano-blue text-white uppercase text-[11px] tracking-wider">
+                            <th class="p-3 rounded-tl-lg">Criterio a Evaluar</th>
+                            <th class="p-3 text-center w-24">Cumple (Sí)</th>
+                            <th class="p-3 text-center w-24">No Cumple</th>
+                            <th class="p-3 rounded-tr-lg">Observaciones / Retroalimentación</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 bg-slate-50">
+                        <tr>
+                            <td class="p-3 font-medium text-slate-700">1. Representación clara del tema «Paisaje de otoño».</td>
+                            <td class="p-3 text-center"><input type="checkbox" class="w-5 h-5 accent-montano-blue cursor-pointer"></td>
+                            <td class="p-3 text-center"><input type="checkbox" class="w-5 h-5 accent-red-500 cursor-pointer"></td>
+                            <td class="p-3"><input type="text" placeholder="Añadir comentario..." class="w-full p-1.5 border border-slate-200 rounded text-xs focus:ring-1 focus:ring-montano-blue outline-none"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-medium text-slate-700">2. Uso pertinente del color y variedad de detalles visuales.</td>
+                            <td class="p-3 text-center"><input type="checkbox" class="w-5 h-5 accent-montano-blue cursor-pointer"></td>
+                            <td class="p-3 text-center"><input type="checkbox" class="w-5 h-5 accent-red-500 cursor-pointer"></td>
+                            <td class="p-3"><input type="text" placeholder="Añadir comentario..." class="w-full p-1.5 border border-slate-200 rounded text-xs focus:ring-1 focus:ring-montano-blue outline-none"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-medium text-slate-700">3. Organización del espacio y distribución de los elementos.</td>
+                            <td class="p-3 text-center"><input type="checkbox" class="w-5 h-5 accent-montano-blue cursor-pointer"></td>
+                            <td class="p-3 text-center"><input type="checkbox" class="w-5 h-5 accent-red-500 cursor-pointer"></td>
+                            <td class="p-3"><input type="text" placeholder="Añadir comentario..." class="w-full p-1.5 border border-slate-200 rounded text-xs focus:ring-1 focus:ring-montano-blue outline-none"></td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-medium text-slate-700">4. Exposición en plenaria comentando una característica del tema presentado.</td>
+                            <td class="p-3 text-center"><input type="checkbox" class="w-5 h-5 accent-montano-blue cursor-pointer"></td>
+                            <td class="p-3 text-center"><input type="checkbox" class="w-5 h-5 accent-red-500 cursor-pointer"></td>
+                            <td class="p-3"><input type="text" placeholder="Añadir comentario..." class="w-full p-1.5 border border-slate-200 rounded text-xs focus:ring-1 focus:ring-montano-blue outline-none"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-montano-blue text-white py-4 mt-8 text-center text-xs">
+        <p>© 2027 Colegio Montano - Todos los derechos reservados | Modelo Formativo Institucional</p>
+    </footer>
+
+    <!-- Lógica de Interacción JavaScript -->
+    <script>
+        // Función para cambiar de pestañas (Tabs)
+        function switchTab(tabId) {
+            // Ocultar todas las pestañas
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // Remover clase activa de todos los botones
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Mostrar contenido seleccionado
+            const selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.classList.remove('hidden');
+            }
+
+            // Activar botón presionado
+            const targetBtnMap = {
+                'tab1': 'btn-tab1',
+                'tab2': 'btn-tab2',
+                'tab3': 'btn-tab3'
+            };
+            const activeBtn = document.getElementById(targetBtnMap[tabId]);
+            if (activeBtn) {
+                activeBtn.classList.add('active');
+            }
+        }
+
+        // Función para acordeones desplegables
+        function toggleAccordion(accId) {
+            const accordion = document.getElementById(accId);
+            const icon = document.getElementById(accId + '-icon');
+            if (accordion) {
+                accordion.classList.toggle('hidden');
+            }
+            if (icon) {
+                icon.classList.toggle('rotate-180');
+            }
+        }
+
+        // Función Pantalla Completa
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log(`Error al intentar modo pantalla completa: ${err.message}`);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
